@@ -39,9 +39,7 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
         # Setting up SSL from tutorial
-        # https://www.digitalocean.com/community/tutorials/how-to-secure-haproxy-with-let-s-e>        
-	option forwardfor        
-	1-haproxy_ssl_terminationoption http-server-close
+        # https://www.digitalocean.com/community/tutorials/how-to-secure-haproxy-with-let-s-e>        option forwardfor        option http-server-close
 
 # Setting up SSL from tutorial
 
@@ -70,10 +68,10 @@ backend letsencrypt-backend
 
 
 
-#listen appname 0.0.0.0:80
-#       mode http
-#       balance roundrobin
-#       option httpclose
-#       option forwardfor
-#       server 1448-web-01 3.237.27.67:80 check
-#       server 1448-web-02 34.204.168.203:80 check
+listen appname 0.0.0.0:80
+       mode http
+       balance roundrobin
+       option httpclose
+       option forwardfor
+       server 1448-web-01 3.237.27.67:80 check
+       server 1448-web-02 34.204.168.203:80 check
