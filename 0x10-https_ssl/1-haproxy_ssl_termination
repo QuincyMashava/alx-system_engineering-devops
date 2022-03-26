@@ -41,7 +41,7 @@ defaults
         # Setting up SSL from tutorial
         # https://www.digitalocean.com/community/tutorials/how-to-secure-haproxy-with-let-s-e>        
 	option forwardfor        
-	1-haproxy_ssl_terminationoption http-server-close
+	option http-server-close
 
 # Setting up SSL from tutorial
 
